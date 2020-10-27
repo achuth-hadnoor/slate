@@ -1,9 +1,8 @@
 import { LOGIN_USER, REGISTER_USER } from "../constants";
 
-export const loginUserAction = (user) => {
+export const loginUserAction = () => {
   return {
-    type: LOGIN_USER,
-    user
+    type: LOGIN_USER 
   }
 };
 

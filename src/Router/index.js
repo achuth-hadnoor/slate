@@ -1,9 +1,12 @@
 import React from 'react'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router, Switch } from 'react-router-dom'
+import { connect } from 'react-redux';
+
 import Authed from './Authed'
 import Home from '../pages/Home';
-import { connect } from 'react-redux';
 import Auth from '../pages/Auth';
+import Unauthed from './Unauthed';
+import About from '../pages/about';
 
 
 class AppRouter extends React.Component {
@@ -11,9 +14,9 @@ class AppRouter extends React.Component {
         return (
             <Router history={this.props.history}>
                 <Switch>
-                    {/* <Authed path="/" exact component={Home} redirect /> */}
-                    <Route path="/" exact component={Home} />
-                    <Route path="/auth" component={Auth} />
+                    <Unauthed path="/about" component={About} />
+                    <Unauthed path="/auth" component={Auth} />
+                    <Authed path="/" exact component={Home} />
                 </Switch>
             </Router>
         )

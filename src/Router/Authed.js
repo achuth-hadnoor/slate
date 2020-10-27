@@ -1,5 +1,5 @@
 import { Redirect, Route, withRouter } from 'react-router-dom'; 
-
+import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import {Loader} from '../components';
@@ -15,7 +15,7 @@ class AuthedRoute extends React.Component {
 				render={(props) => { 
 					if (!localStorage['authedUser']) { 
 						if (this.props.redirect) {
-							return <Redirect to="/auth" />;
+							return <Redirect to="/about"/>;
 						} else {
 							return <div />;
 						}
@@ -34,6 +34,14 @@ class AuthedRoute extends React.Component {
 	}
 }
  
+AuthedRoute.defaultProps = {
+	redirect: true,
+};
+
+AuthedRoute.propTypes = {
+	component: PropTypes.elementType,
+};
+
 const mapStateToProps = (state) => ({
 	user: state.user,
 });
