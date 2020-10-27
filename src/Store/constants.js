@@ -1,0 +1,14 @@
+export const LOGIN_USER = 'LOGIN_USER';
+export const LOGIN_USER_ERROR = 'LOGIN_USER_ERROR';
+export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
+
+export const REGISTER_USER = 'REGISTER_USER';
+export const REGISTER_USER_ERROR = 'REGISTER_USER_ERROR';
+export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS';
+
+export const SET_USER = 'SET_USER';//SET_USER_SAGA
+export const SET_USER_SAGA = 'SET_USER_SAGA';
+
+export const GET_USER = 'GET_USER';
+export const UPDATE_USER = 'UPDATE_USER';
+export const REMOVE_USER = 'REMOVE_USER';

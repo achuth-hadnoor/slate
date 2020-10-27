@@ -1,4 +1,4 @@
-import { SET_USER_SAGA, SET_USER } from "../Actions/constants";
+import { SET_USER } from "../constants";
 
 const Initial_state = {
     user:{
@@ -13,8 +13,7 @@ export const userReducer = (state = Initial_state , action)=>{
         return{
             ...state,
             user
-        }
-    
+        }    
         default:
             return state;
     }
